@@ -1,6 +1,7 @@
 # Approach 1: Brute Force Method
 # Time Complexity = O(n) where a for loop to loop through n data
 # Space Complexity = O(n) where data is stored in hash table
+# LeetCode runtime = 118ms and memory usage = 15.2 MB
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         visited_values = dict()
@@ -13,7 +14,8 @@ class Solution:
                 
 # Approach 2: Hash Table Method
 # Time Complexity = O(n^2) where two for loop to loop through n data
-# Space Complexity = O(1) where no data is stored           
+# Space Complexity = O(1) where no data is stored
+# LeetCode runtime = 6262ms and memory usage = 14.9 MB
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:             
         for index in range(len(nums)):
@@ -25,6 +27,7 @@ class Solution:
 # Approach 3: Sorting Method
 # Time Complexity = O(nlog(n)) where standard python sorted() function will have runtime of nlog(n)
 # Space Complexity = O(n) where sorted data is stored is a list of tuples
+# LeetCode runtime = 143ms and memory usage = 15.4 MB
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         nums = sorted(enumerate(nums), key=lambda x: x[1])  # LeetCode wants the original index and not the sorted index
