@@ -9,6 +9,7 @@ class Solution:
                 return [visited_values[target - value], index]
             else:
                 visited_values[value] = index
+        return []
                 
 # Approach 2: Hash Table Method
 # Time Complexity = O(n^2) where two for loop to loop through n data
@@ -19,3 +20,4 @@ class Solution:
             for index_2 in range(index + 1, len(nums)):
                 if nums[index] + nums[index_2] == target:
                     return [index, index_2]
+        return []
