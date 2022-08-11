@@ -1,6 +1,6 @@
 # Approach 1: Brute Force Method
 # Time Complexity = O(n) where a for loop to loop through n data
-# Space Complexity = O(n) where values are stores in hash table
+# Space Complexity = O(n) where data is stored in hash table
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         visited_values = dict()
@@ -20,4 +20,21 @@ class Solution:
             for index_2 in range(index + 1, len(nums)):
                 if nums[index] + nums[index_2] == target:
                     return [index, index_2]
+        return []
+       
+# Approach 3: Sorting Method
+# Time Complexity = O(nlog(n)) where standard python sorted() function will have runtime of nlog(n)
+# Space Complexity = O(n) where sorted data is stored is a list of tuples
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        nums = sorted(enumerate(nums), key=lambda x: x[1])  # LeetCode wants the original index and not the sorted index
+        first_index = 0
+        last_index = len(nums) - 1
+        while first_index <= last_index:
+            if nums[first_index][1] + nums[last_index][1] == target:
+                return [nums[first_index][0], nums[last_index][0]]
+            elif nums[first_index][1] + nums[last_index][1] > target:
+                last_index -= 1
+            else:
+                first_index += 1
         return []
