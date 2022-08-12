@@ -1,4 +1,4 @@
-# Approach 1
+# Approach 1: String Method
 # Time Complexity = O(n) where a while loop to loop through n / 2 data
 # Space Complexity = O(1) where only left_index and right_index are stored regardless of the length of input
 # LeetCode runtime = 88 ms and memory usage = 13.9 MB
