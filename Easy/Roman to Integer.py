@@ -1,4 +1,7 @@
 # Approach 1
+# Time Complexity = O(m + n) where two for loop to loop through n data
+# Space Complexity = O(n) where string s is stored
+# LeetCode runtime = 100 ms and memory usage = 13.9 MB
 class Solution:
     def romanToInt(self, s: str) -> int:
         single_roman = {
@@ -33,5 +36,7 @@ class Solution:
             
         return result
 
-    # Approach 2
+# Approach 2
+
+
     
