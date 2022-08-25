@@ -32,3 +32,6 @@ class Solution:
             result += single_roman[roman]
             
         return result
+
+    # Approach 2
+    
